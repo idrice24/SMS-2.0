@@ -16,25 +16,6 @@ export class AuthService {
 
   }
 
-  checkLogin(username, password): Observable<boolean | void> {
-    // logic to check password
-
-    return this.userService.findUser(username, password).pipe(
-      map(userFromBackend => {
-        if (userFromBackend && userFromBackend.token) {
-
-          // Get user data from Browser!!
-          localStorage.setItem('currentUserKey', JSON.stringify(userFromBackend.token));
-
-          console.log('User Found !!--- ');
-
-          return true;
-        }
-
-      }),
-      delay(500)); // Delay just for fun !!!
-  }
-
   getAuthorizationToken() {
     const currentUser = JSON.parse(localStorage.getItem('currentUserKey'));
     return currentUser.token;
