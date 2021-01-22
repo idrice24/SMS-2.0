@@ -7,6 +7,8 @@ import { RegistryComponent } from './components/registry/registry.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { ContactModule } from '../contact/contact.module';
+
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { InputTextModule } from 'primeng/inputtext';
@@ -23,6 +25,7 @@ import { CardModule } from 'primeng/card';
     ReactiveFormsModule, // Form will not works important!!
     ButtonModule, // Due to Rounded and Outlined Icon Buttons
     RippleModule, // Due to pRippe in home.html
+    ContactModule,
     
   ],
   exports: [
