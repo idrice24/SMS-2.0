@@ -9,6 +9,7 @@ import { ManageUserComponent } from './components/manage-user/manage-user.compon
 import { ManageAbonnementComponent } from './components/manage-abonnement/manage-abonnement.component';
 import { StudentDashBoardComponent } from './components/student-dash-board/student-dash-board.component';
 import { AdminDashBoardComponent } from './components/admin-dash-board/admin-dash-board.component';
+import { SharedModule } from '../shared/shared.module.ts';
 
 
 const adminRoutes: Routes = [
@@ -38,7 +39,8 @@ const adminRoutes: Routes = [
     AdminDashBoardComponent
     ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

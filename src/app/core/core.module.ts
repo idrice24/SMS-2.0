@@ -8,11 +8,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ContactModule } from '../contact/contact.module';
+import { SharedModule } from '../shared/shared.module';
 
-import { ButtonModule } from 'primeng/button';
-import { RippleModule } from 'primeng/ripple';
-import { InputTextModule } from 'primeng/inputtext';
-import { CardModule } from 'primeng/card';
+
 
 
 
@@ -23,9 +21,8 @@ import { CardModule } from 'primeng/card';
     RouterModule, // Links will not works important!!
     FormsModule, // Form will not works important!!
     ReactiveFormsModule, // Form will not works important!!
-    ButtonModule, // Due to Rounded and Outlined Icon Buttons
-    RippleModule, // Due to pRippe in home.html
     ContactModule,
+    SharedModule,
     
   ],
   exports: [
@@ -33,8 +30,7 @@ import { CardModule } from 'primeng/card';
     LoginComponent,
     PageNotFoundComponent,
     RegistryComponent,
-    InputTextModule,
-    CardModule
+    SharedModule
 
   ]
 })
