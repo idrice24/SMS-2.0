@@ -34,6 +34,15 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  	this.loginForm = new FormGroup({
+  		fName: new FormControl(this.appUser.fName, [
+        Validators.required,
+        Validators.minLength(4),
+        // forbiddenNameValidator(/bob/i)
+      ]),
+
+  		
+  	})
   }
 
 }
