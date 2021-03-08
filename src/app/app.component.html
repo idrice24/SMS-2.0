@@ -3,13 +3,13 @@
 <div *ngIf="!loading">
   <app-header></app-header>
   <p></p><br><br>
+
   <div class="container-fluid" [@routeAnimations]="prepareRoute(outlet)">
     <router-outlet #outlet="outlet"></router-outlet>
   </div>
 
 
-  <app-footer></app-footer>
-</div>
+
 
 <div *ngIf="loading" class="d-flex justify-content-center loading-spinner">
   <div class="spinner-grow text-primary" role="status">
@@ -37,4 +37,6 @@
     <span class="sr-only">Loading...</span>
   </div>
 
+</div>
+  <app-footer></app-footer>
 </div>
