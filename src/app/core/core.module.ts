@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ContactModule } from '../contact/contact.module';
 import { SharedModule } from '../shared/shared.module';
+import { BlogModule } from '../blog/blog.module';
 
 
 
@@ -28,6 +29,7 @@ import { SharedModule } from '../shared/shared.module';
   exports: [
     HomeComponent,
     LoginComponent,
+    BlogModule,
     PageNotFoundComponent,
     RegistryComponent,
     SharedModule
