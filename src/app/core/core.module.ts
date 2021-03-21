@@ -29,7 +29,7 @@ import { BlogModule } from '../blog/blog.module';
   exports: [
     HomeComponent,
     LoginComponent,
-    BlogModule,
+    // BlogModule,
     PageNotFoundComponent,
     RegistryComponent,
     SharedModule
