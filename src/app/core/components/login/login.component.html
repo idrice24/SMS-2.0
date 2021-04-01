@@ -1,27 +1,56 @@
-<section id="secL">
-    <div class="container">
+ <section>
+   <p-card class="p-shadow-24">
+     <!--TITLE-->
+     <div class="row mb-5">
+       <div class="col-md-12 text-center">
+         <h1 data-aos="fade-in-up" data-aos-offset="100" class="text-primary">S'identifier</h1>
+       </div>
+     </div>
 
-        <form  class="form-signin">
-            <img  width="50" height="50" alt="Logo" />
-            <h3 class="form-signin-heading" text="Welcome"></h3>
-            <br/>
-            <div class="input-group input-group-lg mb-8">
-            <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
-            <input type="text" id="email" name="email" placeholder="Email" class="form-control" />
-        </div> <br/>
 
-        <div class="input-group input-group-lg mb-8">
-            <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span><input type="password" placeholder="Password" id="password" name="password" class="form-control" /></div><br>
-            <div class="input-group input-group-lg mb-12">
-                <div class="p-col-12 p-md-4">
-            <button pButton pRipple icon="pi pi-sign-in" name="Submit" label="Login" type="button" text="Login"></button>
-        </div>
-        <div class="p-col-12 p-md-4">
+     <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+       <div class="p-d-flex p-jc-center">
+         <div class="p-grid">
+           <!--USERNAME-->
+           <div class="p-col-12">
+             <div class="p-inputgroup">
+               <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+               <input pInputText formControlName="fName" type="text" placeholder="Nom d'utilisateur">
+             </div>
+             <div *ngIf="fName.invalid && (fName.dirty || fName.touched)" class="p-col-12">
+               <small *ngIf="fName.errors.required" class="p-invalid">Name is required.</small>
+               <small *ngIf="fName.errors.minlength" class="p-invalid">Name must be at least 4 characters long.</small>
+             </div>
+           </div>
 
-            <span class="">New user? <a href="/">Register here</a></span>
-        </div>
-    </div>
-    </form>
 
-</div>
-</section>
+           <!--PASSWORD-->
+           <!---
+            1. [feedback]="false" We don't want to show the strenght indicator to the user @Idrice
+          -->
+           <div class="p-col-12">
+             <div class="p-inputgroup">
+               <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+               <input [feedback]="false" type="password" formControlName="password" placeholder="Entre le mot de passe"
+                 pPassword />
+             </div>
+             <div *ngIf="password.invalid && (password.dirty || password.touched)" class="p-col-12">
+               <small *ngIf="password.errors.required" class="p-invalid">Name is required.</small>
+               <small *ngIf="password.errors.minlength" class="p-invalid">Name must be at least 4 characters
+                 long.</small>
+             </div>
+           </div>
+
+           <!--BUTTON-->
+           <div class="p-col-12">
+             <button pButton pRipple [disabled]="loginForm.invalid" type="submit" label="Envoyer"
+               class="p-button-rounded"></button>
+             <button pButton routerLink="/registry" type="button" label="Create Account" class="p-button-text"></button>
+
+           </div>
+         </div>
+       </div>
+     </form>
+
+   </p-card>
+ </section>

@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(
   	private authService: AuthService,
   	private titleSerice: Title,
-  	private mission: MissionService,
+    public router: Router,
+  	private missionService: MissionService,
   	private formBuilder: FormBuilder) {
   	this.appUser = {
   		fName: '',
@@ -40,9 +41,59 @@ export class LoginComponent implements OnInit {
         Validators.minLength(4),
         // forbiddenNameValidator(/bob/i)
       ]),
-
+      password: new FormControl(this.appUser.password, [
+        Validators.required,
+        Validators.minLength(4)
+      ])
   		
   	})
+  }
+  // convenience getter for easy access to form fields
+  get fName() { return this.loginForm.get('fName'); }
+  get password() { return this.loginForm.get('password'); }
+
+
+
+  login(userData) {
+
+
+    // stop here if form is invalid
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+
+    this.authService.checkLogin(this.fName.value, this.password.value).subscribe(isLoggedIn => {
+
+      if (isLoggedIn) {
+        console.log('LoggIn Successfully');
+        // Usually you would use the redirect URL from the auth service.
+        // However to keep the example simple, we will always redirect to `/admin`.
+        const redirectUrl = '/admin';
+
+
+        // Send to subscriber i.e. header.component.ts
+        this.missionService.confirmLogging(this.fName.value);
+
+        // Set our navigation extras object
+        // TODO@Idrice I dont  understand this !!
+        // that passes on our global query params and fragment
+        const navigationExtras: NavigationExtras = {
+          queryParamsHandling: 'preserve',
+          preserveFragment: true
+        };
+
+        // Clear input data in form
+        this.loginForm.reset();
+
+        // Navigation to admin page!!
+        this.router.navigate([redirectUrl], navigationExtras);
+      }
+    });
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }

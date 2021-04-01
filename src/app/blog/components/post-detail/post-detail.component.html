@@ -2,19 +2,15 @@
 	<p-fieldset *ngIf="selectedTopic">
     <h2>Vos Commentaire</h2>
     <p *ngFor="let c of selectedTopic.comments">
-      <p-divider align="right" type="dashed">
+      <!--<p-divider align="right" type="dashed">
         <div class="p-d-inline-flex p-ai-center">
           <i class="pi pi-user p-mr-2"></i>
           <b> {{c.author}}</b>
         </div>
-      </p-divider>
+      </p-divider>-->
 
-      <span class="list-group-irem">{{c.msg}} </span><i
-
-        style="float: right;">{{c.createdDate | date: 'fullDate'}}</i>
-      <!-- @Ghislain please can you help with how to display dynamic time in angular-->
-      <!-- @idrice what do you mean dynamic time? createdDate is date not a time when someone adds a comments-->
-      <!-- it is  to display the commentvs and the date and time at which it has bieng commented -->
+      <span class="list-group-irem">{{c.msg}} </span><i style="float: right;">{{c.createdDate | date: 'fullDate'}}</i>
+      
     </p>
   </p-fieldset>
 
@@ -54,9 +50,6 @@
         <div class="p-field p-grid">
           <div class="p-inputgroup">
             <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
-            <!-- email attribut to use built in Angular concept for email validation -->
-            <!-- pInputText attribut to use built in PRIMENG concept for InputText -->
-            <!-- type attribut  with value email to indicate the text should be an email -->
             <input email pInputText formControlName="email" type="email" placeholder="Email *">
           </div>
           <div *ngIf="email.invalid && (email.dirty || email.touched)" class="p-col-12">
