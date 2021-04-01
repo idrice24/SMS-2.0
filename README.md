@@ -1,11 +1,11 @@
-# MNS
+# SMS 2.0
 <p align="center">
-    <a href="https://github.com/idrice24/mns/issues/" title="Open Issues"><img src="https://img.shields.io/github/issues/idrice24/mns?style=flat-square "></a>
-<a href="https://app.circleci.com/pipelines/github/idrice24/mns" title="Circleci"><img src="https://img.shields.io/circleci/build/github/idrice24/mns?color=green&logo=red&style=flat-square?style=flat-square"></a>
-  <a href="https://github.com/idrice24/mns/" title="License"><img src="https://img.shields.io/github/license/idrice24/mns?style=flat-square"></a>
-  <a href="https://github.com/idrice24/mns/" title="Languages"><img src="https://img.shields.io/github/languages/count/idrice24/mns?style=flat-square"></a>
-  <a href="https://github.com/idrice24/mns/" title="Version"><img src="https://img.shields.io/github/package-json/v/idrice24/mns?style=flat-square"></a>
-  <img src="https://img.shields.io/github/last-commit/idrice24/mns/master">
+    <a href="https://github.com/idrice24/sms-2.0/issues/" title="Open Issues"><img src="https://img.shields.io/github/issues/idrice24/sms-2.0?style=flat-square "></a>
+<a href="https://app.circleci.com/pipelines/github/idrice24/sms-2.0" title="Circleci"><img src="https://img.shields.io/circleci/build/github/idrice24/sms-2.0?color=green&logo=red&style=flat-square?style=flat-square"></a>
+  <a href="https://github.com/idrice24/sms-2.0/" title="License"><img src="https://img.shields.io/github/license/idrice24/sms-2.0?style=flat-square"></a>
+  <a href="https://github.com/idrice24/sms-2.0/" title="Languages"><img src="https://img.shields.io/github/languages/count/idrice24/sms-2.0?style=flat-square"></a>
+  <a href="https://github.com/idrice24/sms-2.0/" title="Version"><img src="https://img.shields.io/github/package-json/v/idrice24/sms-2.0?style=flat-square"></a>
+  <img src="https://img.shields.io/github/last-commit/idrice24/sms-2.0/master">
   
 </p>
 . 
@@ -52,7 +52,7 @@ Run the batch file **deploy.cmd** and Commit your change if **NO error**
 <hr/>
 
 # Sample
-Some sample has been listed [here](https://github.com/idrice24/mns/wiki/Samples) be free to add more..
+Some sample has been listed [here](https://github.com/idrice24/sms-2.0/wiki/Samples) be free to add more..
 - [Ref1](https://www.truecodex.com/)
 # Howtos
 ## Scripting
@@ -70,7 +70,7 @@ The following channels are available for discussions, feedback, and support requ
 | **General Discussion** | <a href="https://github.com/idrice24/idrice/issues/new/choose" title="General Discussion"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
 | **Concept Feedback**	 | <a href="https://github.com/idrice24/idrice/issues/new/choose"><img src="https://img.shields.io/badge/idrice24-issues-blue"></a></a> |
 | **Backend Issue**		 | <a href="https://github.com/Ghislain1/mns237-server/issues"><img src="https://img.shields.io/github/issues-raw/ghislain1/mns237-server"></a></a> |
-| **Other Requests**	 | <a href="idrice.tsafouet@yahoo.com" title="Email IDRICE24 Team"><img src="https://img.shields.io/github/contributors/idrice24/mns"></a></a> |
+| **Other Requests**	 | <a href="idrice.tsafouet@yahoo.com" title="Email IDRICE24 Team"><img src="https://img.shields.io/github/contributors/idrice24/sms-2.0"></a></a> |
 
 
 ## how-to-contribute  
@@ -78,7 +78,6 @@ The following channels are available for discussions, feedback, and support requ
   
 ## contributors
  - @Idrice24
- - @Gishlain1
 ## repositories
 ## liecensing
 
