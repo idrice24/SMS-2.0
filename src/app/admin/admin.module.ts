@@ -9,8 +9,9 @@ import { ManageUserComponent } from './components/manage-user/manage-user.compon
 import { ManageAbonnementComponent } from './components/manage-abonnement/manage-abonnement.component';
 import { StudentDashBoardComponent } from './components/student-dash-board/student-dash-board.component';
 import { AdminDashBoardComponent } from './components/admin-dash-board/admin-dash-board.component';
-import { SharedModule } from '../shared/shared.module.ts';
-
+import { SharedModule } from '../shared/shared.module';
+import { ConfirmationService } from 'primeng/api';
+import { MessageService } from 'primeng/api';
 
 const adminRoutes: Routes = [
   {
@@ -22,7 +23,7 @@ const adminRoutes: Routes = [
         path: '',
         canActivateChild: [AuthGuard],
         children: [
-          
+          { path: 'dashboard', component: AdminDashBoardComponent }
         ]
       }
     ]
@@ -33,14 +34,17 @@ const adminRoutes: Routes = [
   declarations: [
     AdminComponent,
     ManageBlogComponent, 
-    ManageUserComponent, 
+    AdminDashBoardComponent,
+    ManageUserComponent,
     ManageAbonnementComponent, 
     StudentDashBoardComponent,
     AdminDashBoardComponent
     ],
   imports: [
     CommonModule,
-    SharedModule
-  ]
+    SharedModule,
+    RouterModule.forChild(adminRoutes)
+  ],
+  providers: [MessageService, ConfirmationService]
 })
 export class AdminModule { }

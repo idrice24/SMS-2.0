@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private primengConfig: PrimeNGConfig
+    ) { }
 
   public myVar;
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
   	this.myVar = setTimeout(this.showPage, 3000);
   }
 

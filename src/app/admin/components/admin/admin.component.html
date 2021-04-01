@@ -1,1 +1,9 @@
-<p>admin works!</p>
+<section>
+	<p-sidebar>
+		<p-progressBar mode="indeterminate"></p-progressBar>
+		<p-progressBar class="p-mb-6" [showValue]="false" [value]="100"></p-progressBar>
+	</p-sidebar>
+	<p-menu class="p-mt-6" [model]="items"></p-menu>
+	<button oButton class="p-button-rounded" (click)="display = true" icon="pi pi-th-large" label="Show Menu"></button>
+	<router-outlet></router-outlet>
+</section>
